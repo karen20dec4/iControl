@@ -47,7 +47,7 @@ static class KeysNative
     public static extern short GetAsyncKeyState(int vKey);
 
     public const uint VK_F1 = 0x70;
-    public const uint VK_F2 = 0x71;
+    public const uint VK_F4 = 0x73;
     public const uint VK_F3 = 0x72;
     public const uint VK_F11 = 0x7A;
     public const uint VK_F12 = 0x7B;

@@ -73,7 +73,7 @@ $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoi
     -ExecutionTimeLimit ([TimeSpan]::Zero) -MultipleInstances IgnoreNew
 $principal = New-ScheduledTaskPrincipal -UserId $user -LogonType Interactive -RunLevel Limited
 Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings `
-    -Principal $principal -Description 'iControl: ventilator SMC + afisaj taskbar + taste F1/F2/F3/F11/F12 (iMac Boot Camp)' `
+    -Principal $principal -Description 'iControl: ventilator SMC + afisaj taskbar + taste F1/F3/F4/F11/F12 (iMac Boot Camp)' `
     -Force | Out-Null
 Write-Host "Task '$taskName' inregistrat."
 

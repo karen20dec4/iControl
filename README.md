@@ -6,7 +6,7 @@ Utilitar de tavă pentru **iMac 27" 2017 (iMac18,3)** cu **Windows 10 în Boot C
 |---|---|
 | **Ventilator** (`src/Fan`) | Controlează ventilatorul prin Apple SMC cu o curbă silențioasă (~950 rpm în idle, sub limita de 1200 rpm impusă de SMC) și revine automat pe modul din fabrică la ieșire, sleep, shutdown sau eroare. |
 | **Afișaj taskbar** (`src/Fan/TaskbarLabel.cs`) | Afișează în taskbar, lângă ceas: `955rpm \| 61°CPU \| 53°GPU`. Temperaturile devin galbene de la 75° și roșii de la 85°. |
-| **Taste** (`src/Keys`) | F1 = mut, F2 / F3 = volum −/+, F11 / F12 = luminozitate −/+, fiecare cu OSD propriu în stil macOS. Cu Shift, tastele F funcționează normal. |
+| **Taste** (`src/Keys`) | F1 = mut, F3 / F4 = volum −/+ (F2 rămâne liberă), F11 / F12 = luminozitate −/+, fiecare cu OSD propriu în stil macOS. Cu Shift, tastele F funcționează normal. |
 
 Proiectul a fost creat pe 2026-11-03 prin unificarea a două aplicații separate: `iMacFanControl` și `iMacBrightnessKeys`. Aceasta din urmă conținea deja și tastele de volum.
 

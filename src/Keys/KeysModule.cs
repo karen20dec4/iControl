@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 // Media and brightness keys for an iMac running Windows under Boot Camp.
 //   F11 / F12  brightness down / up   (internal panel, via WMI)
-//   F2  / F3   volume down / up       (via the Core Audio endpoint)
+//   F3  / F4   volume down / up       (via the Core Audio endpoint)
 //   F1         mute toggle
 // Shift plus any of them is a different combination, so it is never captured.
 //
@@ -85,7 +85,7 @@ static class KeysModule
         brightness.DropDownItems.Add("Reaplica luminozitatea salvata", null, delegate { QueueRestore(); });
         menu.Items.Add(brightness);
 
-        ToolStripMenuItem volume = new ToolStripMenuItem("Volum (F1 / F2 / F3)");
+        ToolStripMenuItem volume = new ToolStripMenuItem("Volum (F1 / F3 / F4)");
         volume.DropDownItems.Add("Test: scade volumul", null, delegate { QueueVolume(-1); });
         volume.DropDownItems.Add("Test: creste volumul", null, delegate { QueueVolume(1); });
         volume.DropDownItems.Add("Test: mut / demut", null, delegate { QueueMute(); });
@@ -141,8 +141,8 @@ static class KeysModule
         keys = new HotkeyWindow();
         keys.Pressed += OnHotkey;
         Claim(IdMute, KeysNative.VK_F1, "F1 mut");
-        Claim(IdVolumeDown, KeysNative.VK_F2, "F2 volum -");
-        Claim(IdVolumeUp, KeysNative.VK_F3, "F3 volum +");
+        Claim(IdVolumeDown, KeysNative.VK_F3, "F3 volum -");
+        Claim(IdVolumeUp, KeysNative.VK_F4, "F4 volum +");
         Claim(IdBrightnessDown, KeysNative.VK_F11, "F11 luminozitate -");
         Claim(IdBrightnessUp, KeysNative.VK_F12, "F12 luminozitate +");
         InstallFallbackHook();
@@ -212,8 +212,8 @@ static class KeysModule
     static void Dispatch(uint vk)
     {
         if (vk == KeysNative.VK_F1) QueueMute();
-        else if (vk == KeysNative.VK_F2) QueueVolume(-1);
-        else if (vk == KeysNative.VK_F3) QueueVolume(1);
+        else if (vk == KeysNative.VK_F3) QueueVolume(-1);
+        else if (vk == KeysNative.VK_F4) QueueVolume(1);
         else if (vk == KeysNative.VK_F11) QueueBrightness(-1);
         else if (vk == KeysNative.VK_F12) QueueBrightness(1);
     }

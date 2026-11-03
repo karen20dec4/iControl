@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 // iControl: utilitar de tava pentru iMac 27" 2017 (iMac18,3) cu Windows 10 in Boot Camp.
 //   - Fan\   controlul ventilatorului prin Apple SMC + afisajul "rpm | °CPU | °GPU" din taskbar
-//   - Keys\  F1/F2/F3 volum, F11/F12 luminozitate, cu OSD propriu
+//   - Keys\  F1/F3/F4 volum, F11/F12 luminozitate, cu OSD propriu
 // Un singur proces, o singura iconita in tava, un singur jurnal (%LOCALAPPDATA%\iControl).
 //
 // Argumente:

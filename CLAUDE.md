@@ -32,7 +32,7 @@ Răspunde în **română**, cu diacritice.
 3. Verifici:
    - `%LOCALAPPDATA%\iControl\log.txt`;
    - o captură a taskbar-ului (de exemplu `CopyFromScreen` pe zona `0,1030 → 1920×50` în PowerShell, salvată în scratchpad, apoi `Read`);
-   - tastele, prin `keybd_event` (F3 urmat de F2, ca să lași volumul cum era).
+   - tastele, prin `keybd_event` (F4 urmat de F3, ca să lași volumul cum era).
 4. Faci commit pe o ramură sau pe `main`, după ce ai cerut acordul utilizatorului. Faci push doar când ți se cere.
 
 ## Siguranță
@@ -48,7 +48,8 @@ Răspunde în **română**, cu diacritice.
 - LibreHardwareMonitor și TrafficMonitor **nu** pot citi ventilatorul Apple SMC. Nu le propune.
 - F12 nu poate fi înregistrată cu `RegisterHotKey`, fiind rezervată pentru debugger, așa că folosește hook-ul de rezervă. E un comportament normal.
 - `Bootcamp.exe` e oprit intenționat, pentru că suprascrie luminozitatea manuală.
-- Task-urile vechi `Ventilator iMac` și `Luminozitate iMac` sunt **dezactivate**, nu șterse. Folderele vechi `C:\Users\Joy\iMacFanControl` și `C:\Users\Joy\iMacBrightnessKeys` rămân ca arhivă până când utilizatorul confirmă ștergerea lor.
+- Aplicațiile vechi (`iMacFanControl`, `iMacBrightnessKeys`), cu folderele și task-urile lor, au fost șterse pe 2026-11-03. Blocul de migrare din `deploy.ps1` nu mai are efect.
+- **F2 este lăsată liberă intenționat**, la cererea utilizatorului. Volumul este pe F3 (−) și F4 (+).
 
 ## Idei posibile (doar la cerere)
 
